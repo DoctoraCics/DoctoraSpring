@@ -1,20 +1,18 @@
 package com.samplefullstack.samplefullstack.entity;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "tbl_employees")
 public class Employee {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employeeId;
+    private Long employee_id;
     private String name;
     private String location;
     private String department;
 
-    public Employee(int employeeId, String name, String location, String department) {
-        this.employeeId = employeeId;
+    public Employee(Long employee_id, String name, String location, String department) {
+        this.employee_id = employee_id;
         this.name = name;
         this.location = location;
         this.department = department;
@@ -24,13 +22,12 @@ public class Employee {
 
     }
 
-
-    public int getEmployeeId() {
-        return employeeId;
+    public Long getEmployeeId() {
+        return employee_id;
     }
 
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployeeId(Long employeeId) {
+        this.employee_id = employeeId;
     }
 
     public String getName() {
