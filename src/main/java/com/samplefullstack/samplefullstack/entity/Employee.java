@@ -4,9 +4,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tbl_employees")
 public class Employee {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employee_id;
+
     private String name;
     private String location;
     private String department;
